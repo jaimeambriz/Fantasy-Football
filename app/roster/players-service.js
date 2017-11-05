@@ -117,7 +117,11 @@ function PlayersService(callback) {
             abbreviation: "ten"}, {
             name: "redskins",
             city: "washington",
-            abbreviation: "was"}]
+            abbreviation: "was"}, {
+            name:"browns",
+            city:"clevland",
+            abbreviation:"cle"
+            }]
         var teamName = teamName.toLowerCase()
         players = []
         var out = ""

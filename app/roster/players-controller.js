@@ -46,7 +46,7 @@ function PlayersController() {
           <h1>${player.fullname}</h1>
           <h2>${player.position}</h2>
           <h3>${player.pro_team}, ${player.jersey}</h3>
-          <button class="btn-success" id="${player.id}" onclick="app.controllers.playersController.add('${player.id}')">Add to Team</button>
+          <button class="btn-primary" id="${player.id}" onclick="app.controllers.playersController.add('${player.id}')">Add to Team</button>
       </div>
           `
 
@@ -83,16 +83,5 @@ function PlayersController() {
         updateRoster(playersService.getPlayers())
         updateMyTeam(playersService.getMyTeam())
     }
-
-
-
-
-
-
-
-
-
-
-
 
 }

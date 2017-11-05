@@ -14,7 +14,7 @@ function PlayersController() {
         playersService.getPlayersByName(player)
         updateRoster(playersService.getPlayers()) 
     }
-
+    
     this.getPlayersByTeam = function getPlayersByTeam(e) {
         e.preventDefault();
         var team = e.target.team.value;
@@ -46,10 +46,9 @@ function PlayersController() {
           <h1>${player.fullname}</h1>
           <h2>${player.position}</h2>
           <h3>${player.pro_team}, ${player.jersey}</h3>
-          <button class="btn-primary" id="${player.id}" onclick="app.controllers.playersController.add('${player.id}')">Add to Team</button>
+          <button class="btn-success" id="${player.id}" onclick="app.controllers.playersController.add('${player.id}')">Add to Team</button>
       </div>
           `
-
         }
         document.getElementById("player-roster").innerHTML = template
     }

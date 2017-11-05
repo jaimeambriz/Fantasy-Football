@@ -22,11 +22,11 @@ function PlayersController() {
         updateRoster(playersService.getPlayers()) 
     }
 
-    // this.getPlayersByTeam = function getPlayersByTeam(e) {
+  // this.getPlayersByTeam = function getPlayersByTeam(e) {
     //     e.preventDefault();
     //     var team = e.target.team.value;
     //     updateRoster(playersService.getPlayersByTeam(team)) 
-    // }
+    // }  
 
      this.getPlayersByPosition = function getPlayersByPosition(e) {
         e.preventDefault();

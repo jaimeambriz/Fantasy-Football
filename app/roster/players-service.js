@@ -13,8 +13,9 @@ function PlayersService(callback) {
 
     this.getPlayersByName = function (name) {
         players = []
+        var name = name.toLowerCase()
         return playersData.filter(function (player) {
-            if (player.firstname.toLowerCase() == name.toLowerCase()) {
+            if (player.firstname.toLowerCase() == name || player.lastname.toLowerCase() == name || player.fullname.toLowerCase() == name) {
                 if (player.jersey !== undefined) {
                     if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
                         players.push(player);

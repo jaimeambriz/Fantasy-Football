@@ -144,7 +144,7 @@ function PlayersService(callback) {
 
     // this.getPlayersByTeam = function (team) {
     //     return playersData.filter(function (player) {
-    //         if (player.pro_team == team) {
+    //         if (player.pro_team == team || player.firstname == team) {
 
     //             return true;
     //         }
@@ -165,6 +165,7 @@ function PlayersService(callback) {
         return players
     }
 
+    
     this.addToTeam = function (id) {
         for (var i = 0; i < players.length; i++) {
             var player = players[i];
@@ -173,13 +174,24 @@ function PlayersService(callback) {
                 players.splice(i, 1)
             }
         }
+        removePlayer(id)
     }
     this.removeFromTeam = function (id) {
         for (var i = 0; i < myTeam.length; i++) {
             var player = myTeam[i];
             if (id == player.id) {
                 players.push(player)
+                playersData.push(player)
                 myTeam.splice(i, 1)
+            }
+        }
+    }
+
+    function removePlayer(id){
+        for (var i = 0; i < playersData.length; i++) {
+            var player = playersData[i];
+            if (player.id == id){
+                playersData.splice(i, 1)
             }
         }
     }

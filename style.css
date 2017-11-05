@@ -1,0 +1,12 @@
+.player-card{
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+}
+.player-roster, .my-team{
+    text-align: center;
+}
+h1, h2, h3 {
+    text-align: center;
+    
+}

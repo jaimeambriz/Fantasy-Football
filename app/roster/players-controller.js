@@ -8,17 +8,17 @@ function PlayersController() {
 
         
     }
-    this.getPlayersByName = function getPlayersByName(e) {
-        e.preventDefault();
-        var player = e.target.player.value;
-        playersService.getPlayersByName(player)
-        updateRoster(playersService.getPlayers()) 
-    }
+    // this.getPlayersByName = function getPlayersByName(e) {
+    //     e.preventDefault();
+    //     var player = e.target.player.value;
+    //     playersService.getPlayersByName(player)
+    //     updateRoster(playersService.getPlayers()) 
+    // }
     
-    this.getPlayersByTeam = function getPlayersByTeam(e) {
+    this.getPlayersBySearch = function getPlayersBySearch(e) {
         e.preventDefault();
         var team = e.target.team.value;
-        playersService.getPlayersByTeam(team)
+        playersService.getPlayersBySearch(team)
         updateRoster(playersService.getPlayers()) 
     }
 
@@ -28,12 +28,12 @@ function PlayersController() {
     //     updateRoster(playersService.getPlayersByTeam(team)) 
     // }  
 
-     this.getPlayersByPosition = function getPlayersByPosition(e) {
-        e.preventDefault();
-        var position = e.target.position.value;
-        playersService.getPlayersByPosition(position)
-        updateRoster(playersService.getPlayers()) 
-      }
+    //  this.getPlayersByPosition = function getPlayersByPosition(e) {
+    //     e.preventDefault();
+    //     var position = e.target.position.value;
+    //     playersService.getPlayersByPosition(position)
+    //     updateRoster(playersService.getPlayers()) 
+    //   }
 
 
     function updateRoster(players) {

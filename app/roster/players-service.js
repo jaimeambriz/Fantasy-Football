@@ -11,22 +11,22 @@ function PlayersService(callback) {
         return (JSON.parse(JSON.stringify(myTeam)))
     }
 
-    this.getPlayersByName = function (name) {
-        players = []
-        var name = name.toLowerCase()
-        return playersData.filter(function (player) {
-            if (player.firstname.toLowerCase() == name || player.lastname.toLowerCase() == name || player.fullname.toLowerCase() == name) {
-                if (player.jersey !== undefined) {
-                    if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
-                        players.push(player);
-                    }
-                }
-            }
-        });
-        return players
-    }
+    // this.getPlayersByName = function (name) {
+    //     players = []
+    //     var name = name.toLowerCase()
+    //     return playersData.filter(function (player) {
+    //         if (player.firstname.toLowerCase() == name || player.lastname.toLowerCase() == name || player.fullname.toLowerCase() == name) {
+    //             if (player.jersey !== undefined) {
+    //                 if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
+    //                     players.push(player);
+    //                 }
+    //             }
+    //         }
+    //     });
+    //     return players
+    // }
 
-    this.getPlayersByTeam = function (teamName) {
+    this.getPlayersBySearch = function (input) {
         var teams = [{
             name: "seahawks",
             city: "seattle",
@@ -122,17 +122,17 @@ function PlayersService(callback) {
             city:"clevland",
             abbreviation:"cle"
             }]
-        var teamName = teamName.toLowerCase()
+        var input = input.toLowerCase()
         players = []
-        var out = ""
         for (var i = 0; i < teams.length; i++) {
             var team = teams[i];
-            if (team.name == teamName || team.city == teamName || team.abbreviation == teamName) {
-                out = team.abbreviation
+            if (team.name == input || team.city == input || team.abbreviation == input) {
+                input = team.abbreviation
             }
-        }
+            }
+            
         return playersData.filter(function (player) {
-            if (player.pro_team.toLowerCase() == out) {
+            if (player.pro_team.toLowerCase() == input || player.firstname.toLowerCase() == input || player.position.toLowerCase() == input || player.lastname.toLowerCase() == input || player.fullname.toLowerCase() == input) {
                 if (player.jersey !== undefined) {
                     if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
                         players.push(player);
@@ -151,19 +151,19 @@ function PlayersService(callback) {
     //     });
     // }
 
-    this.getPlayersByPosition = function (position) {
-        players = []
-        return playersData.filter(function (player) {
-            if (player.position.toLowerCase() == position.toLowerCase()) {
-                if (player.jersey !== undefined) {
-                    if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
-                        players.push(player);
-                    }
-                }
-            }
-        });
-        return players
-    }
+    // this.getPlayersByPosition = function (position) {
+    //     players = []
+    //     return playersData.filter(function (player) {
+    //         if (player.position.toLowerCase() == position.toLowerCase()) {
+    //             if (player.jersey !== undefined) {
+    //                 if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
+    //                     players.push(player);
+    //                 }
+    //             }
+    //         }
+    //     });
+    //     return players
+    // }
 
     
     this.addToTeam = function (id) {

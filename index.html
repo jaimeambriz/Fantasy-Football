@@ -41,27 +41,14 @@
         </div>
         <div class="panel panel-primary">
             <div class="panel-heading">Search for players</div>
-            <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersByName(event)">
+            <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersBySearch(event)">
                 <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
                 <div class="form-group text-center">
-                    <input type="text" class="form-control text-center" name="player" placeholder="Player Name" />
+                    <input type="text" class="form-control text-center" name="team" placeholder="Player/Team/Position" />
                     <button type="submit" class="btn btn-primary" id="get-players-button">Get Players</button>
                 </div>
             </form>
-            <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersByTeam(event)">
-                <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-                <div class="form-group text-center">
-                    <input type="text" class="form-control text-center" name="team" placeholder="Player Team" />
-                    <button type="submit" class="btn btn-primary" id="get-players-button">Get Players</button>
-                </div>
-            </form>
-            <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersByPosition(event)">
-                <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
-                <div class="form-group text-center">
-                    <input type="text" class="form-control text-center" name="position" placeholder="Player Position 'QB'" />
-                    <button type="submit" class="btn btn-primary" id="get-players-button">Get Players</button>
-                </div>
-            </form>
+          
 
 
 

@@ -17,8 +17,8 @@ function PlayersController() {
     
     this.getPlayersBySearch = function getPlayersBySearch(e) {
         e.preventDefault();
-        var team = e.target.team.value;
-        playersService.getPlayersBySearch(team)
+        var input = e.target.input.value;
+        playersService.getPlayersBySearch(input)
         updateRoster(playersService.getPlayers()) 
     }
 

@@ -15,9 +15,9 @@
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-heading text-center">
-                <h1>NFL ROSTER</h1>
+                <h1>MY Roster</h1>
             </div>
-            <div class="player-roster" id="player-roster">
+            <div class="player-roster" id="my-team">
                 <div class="player-card">
                     <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
                     <h1>player name</h1>
@@ -27,9 +27,9 @@
                 </div>
             </div>
             <div class="panel-heading text-center">
-                <h2>MY TEAM</h2>
+                <h2>NFL ROSTER</h2>
             </div>
-            <div class="my-team" id="my-team">
+            <div class="my-team" id="player-roster">
                 <div class="player-card">
                     <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
                     <h1>player name</h1>
@@ -44,37 +44,11 @@
             <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersBySearch(event)">
                 <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
                 <div class="form-group text-center">
-                    <input type="text" class="form-control text-center" name="team" placeholder="Player/Team/Position" />
+                    <input type="text" class="form-control text-center" name="input" placeholder="Player/Team/Position" />
                     <button type="submit" class="btn btn-primary" id="get-players-button">Get Players</button>
                 </div>
             </form>
           
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <!-- <form class"form" onsubmit="app.controllers.playersController.getPlayersByName()">
                 <div class="form-group">
                     <label for="Player-Name">Player Name</label>
@@ -92,18 +66,6 @@
             </form> -->
         </div>
     </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 

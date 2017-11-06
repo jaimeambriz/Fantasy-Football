@@ -126,12 +126,12 @@ function PlayersService(callback) {
         players = []
         for (var i = 0; i < teams.length; i++) {
             var team = teams[i];
-            if (team.name == input || team.city == input || team.abbreviation == input) {
+            if (team.name == input || team.city == input) {
                 input = team.abbreviation
             }
             }
-            
-        return playersData.filter(function (player) {
+        playersData.filter(function (player) {
+            //player[searchtype].toLowerCase() == input
             if (player.pro_team.toLowerCase() == input || player.firstname.toLowerCase() == input || player.position.toLowerCase() == input || player.lastname.toLowerCase() == input || player.fullname.toLowerCase() == input) {
                 if (player.jersey !== undefined) {
                     if (player.photo !== "http://sports.cbsimg.net/images/players/unknown-player-170x170.png") {
@@ -142,7 +142,7 @@ function PlayersService(callback) {
         });
     }
 
-    // this.getPlayersByTeam = function (team) {
+    // this.getPlayersByTeam = function (input) {
     //     return playersData.filter(function (player) {
     //         if (player.pro_team == team || player.firstname == team) {
 
@@ -224,5 +224,5 @@ function PlayersService(callback) {
         });
     }
     loadPlayersData(); //call the function above every time we create a new service
-    console.log(playersData)
+    // console.log(playersData)
 }

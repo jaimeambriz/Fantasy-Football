@@ -167,14 +167,29 @@ function PlayersService(callback) {
 
     
     this.addToTeam = function (id) {
+        var positions = setPositions()
         for (var i = 0; i < players.length; i++) {
             var player = players[i];
-            if (id == player.id && myTeam.length < 9) {
+            if (id == player.id && myTeam.length < 9 && !positions[player.position]) {
                 myTeam.push(player)
                 players.splice(i, 1)
             }
         }
         removePlayer(id)
+    }
+
+    function setPositions(){
+        var dictionary = {}
+        for (var id = 0; id < myTeam.length; id++) {
+            var player = myTeam[id];
+           if (!dictionary[player.position]){
+            dictionary[player.position] = 0
+           }
+           dictionary[player.position]++
+        }
+        return dictionary
+
+
     }
     this.removeFromTeam = function (id) {
         for (var i = 0; i < myTeam.length; i++) {

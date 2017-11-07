@@ -98,10 +98,10 @@ function PlayersService(callback) {
             city: "philadelphia",
             abbreviation: "phi"}, {
             name: "steelers",
-            city: "pitssburgh",
+            city: "pittsburgh",
             abbreviation: "pit"}, {
             name: "chargers",
-            city: "los asngeles",
+            city: "los angeles",
             abbreviation: "lac"}, {
             name: "rams",
             city: "los angeles",
@@ -188,9 +188,8 @@ function PlayersService(callback) {
            dictionary[player.position]++
         }
         return dictionary
-
-
     }
+    
     this.removeFromTeam = function (id) {
         for (var i = 0; i < myTeam.length; i++) {
             var player = myTeam[i];

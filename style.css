@@ -1,6 +1,8 @@
+.background{
+    background:black;
+}
 .player-card{
     display: inline-block;
-    border: 1px solid black;
     text-align: center;
 }
 .player-roster, .my-team{
@@ -8,5 +10,6 @@
 }
 h1, h2, h3 {
     text-align: center;
+    color: white;
     
 }

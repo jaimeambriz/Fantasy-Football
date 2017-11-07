@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="panel panel-primary">
+        <div class="panel panel-primary background">
             <div class="panel-heading text-center">
                 <h1>MY TEAM</h1>
             </div>
-            <div class="player-roster" id="my-team">
+            <div class="my-team animated fadeIn" id="my-team">
                 <div class="player-card">
                     <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
                     <h1>player name</h1>
@@ -29,8 +30,8 @@
             <div class="panel-heading text-center">
                 <h2>NFL ROSTER</h2>
             </div>
-            <div class="my-team" id="player-roster">
-                <div class="player-card">
+            <div class="player-roster" id="player-roster">
+                <div class="player-card animated fadeIn">
                     <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
                     <h1>player name</h1>
                     <h2>position</h2>
@@ -40,7 +41,7 @@
             </div>
         </div>
         <div class="panel panel-primary">
-            <div class="panel-heading">Search for players</div>
+            <div class="panel-heading text-center">Search for players</div>
             <form class="form-inline text-center" onsubmit="app.controllers.playersController.getPlayersBySearch(event)">
                 <!--DO NOT MODIFY THE ID OR ONCLICK ATTRIBUTES IN THIS FORM-->
                 <div class="form-group text-center">

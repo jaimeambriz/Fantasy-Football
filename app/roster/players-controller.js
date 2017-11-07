@@ -41,7 +41,7 @@ function PlayersController() {
         for (var i = 0; i < players.length; i++) {
             var player = players[i];
             template += `
-          <div class="player-card">
+          <div class="player-card animated fadeIn">
           <img src="${player.photo}" alt="">
           <h1>${player.fullname}</h1>
           <h2>${player.position}</h2>
@@ -58,7 +58,7 @@ function PlayersController() {
         for (var i = 0; i < players.length; i++) {
             var player = players[i];
             template += `
-          <div class="player-card">
+          <div class="player-card animated fadeInUp">
           <img src="${player.photo}" alt="">
           <h1>${player.fullname}</h1>
           <h2>${player.position}</h2>

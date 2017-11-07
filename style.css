@@ -42,7 +42,7 @@ button{
     animation-duration: 2s;
   }
 
-  @-webkit-keyframes flicker
+  @keyframes flicker
   {
   0% {opacity:0.1;}
   9% {opacity:0;}

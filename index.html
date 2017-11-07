@@ -8,35 +8,39 @@
     <title>Fantasy Football</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <div class="panel panel-primary background">
             <div class="panel-heading text-center">
                 <h1>MY TEAM</h1>
             </div>
-            <div class="my-team animated fadeIn" id="my-team">
-                <div class="player-card">
-                    <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
-                    <h1>player name</h1>
-                    <h2>position</h2>
-                    <h3>team</h3>
-                    <button class="button">Remove from team</button>
+            <div class="my-team fade-in" id="my-team">
+                <div class="player-card fadeIn">
+                    <div class="flicker">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
+                        <h1>player name</h1>
+                        <h2>position</h2>
+                        <h3>team</h3>
+                        <button class="button">Remove from team</button>
+                    </div>
                 </div>
             </div>
             <div class="panel-heading text-center">
                 <h2>NFL ROSTER</h2>
             </div>
             <div class="player-roster" id="player-roster">
-                <div class="player-card animated fadeIn">
-                    <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
-                    <h1>player name</h1>
-                    <h2>position</h2>
-                    <h3>team</h3>
-                    <button class="button">Add to team</button>
+                <div class="player-card fadeIn">
+                    <div class="flicker">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/" alt="">
+                        <h1>player name</h1>
+                        <h2>position</h2>
+                        <h3>team</h3>
+                        <button class="button">Add to team</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,8 +53,10 @@
                     <button type="submit" class="btn btn-primary" id="get-players-button">Get Players</button>
                 </div>
             </form>
-          
-            <!-- <form class"form" onsubmit="app.controllers.playersController.getPlayersByName()">
+        </div>
+    </div>
+
+    <!-- <form class"form" onsubmit="app.controllers.playersController.getPlayersByName()">
                 <div class="form-group">
                     <label for="Player-Name">Player Name</label>
                     <input type="text" class="form-control" id="player-name" placeholder="Enter Player Name" name="player-name">
@@ -65,8 +71,6 @@
                 </div>
                 <button type="submit"  onsubmit="app.controllers.playersController.getPlayersByName(event)"  class="btn btn-default" id="search-for-players">Search</button>
             </form> -->
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 

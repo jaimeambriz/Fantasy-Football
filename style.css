@@ -20,3 +20,59 @@ button{
 .button:active {
     transform: translateY(4px);
   }
+
+  .fadeIn {
+      animation-name: fadeIn;
+      animation: 5.1s 0s 1 fadeIn;
+      opacity:.7;
+    }
+  @keyframes fadeIn {
+     from {
+     opacity: 0;
+     }
+                      
+    to {
+     opacity: .7;
+    }
+ }
+                      
+.flicker {
+    animation-name: flicker;
+    animation-delay: 4s;
+    animation-duration: 2s;
+  }
+
+  @-webkit-keyframes flicker
+  {
+  0% {opacity:0.1;}
+  9% {opacity:0;}
+  10% {opacity:.2;} 
+   13% {opacity:0;}
+  20% {opacity:.3;} 
+  25% {opacity:0;}
+  30% {opacity:0;}
+  40% {opacity:0.1;}
+  50% {opacity:0;}
+  60% {opacity:0.7;}
+  70% {opacity:0.7;}
+  75% {opacity:0.9; }
+  80% {opacity:0.7;}
+  90% {opacity:0.6;}
+  93% {opacity: 0.7;}
+  100% {opacity:0.7;}
+  }
+
+  .fade-in{
+    animation-name: fade-in;
+    animation: 2s 0s 1 fade-in;
+    opacity:1;
+}
+@keyframes fade-in {
+    from {
+    opacity: 0;
+    }
+                     
+   to {
+    opacity: 1;
+   }
+}
